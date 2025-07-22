@@ -1,0 +1,12 @@
+{
+	"name": "Splitify Queue",
+	"description": "A beautiful queue display extension for Spotify that shows your upcoming tracks in a native playlist-style interface",
+	"version": "1.0.0",
+	"authors": [
+		{
+			"name": "Alexander Rebello",
+			"url": "https://www.alexander-rebello.de/"
+		}
+	],
+	"readme": "README.md"
+}

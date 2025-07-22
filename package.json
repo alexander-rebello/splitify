@@ -1,0 +1,28 @@
+{
+	"name": "splitify",
+	"version": "1.0.0",
+	"description": "A beautiful queue display extension for Spotify that shows your upcoming tracks in a native playlist-style interface",
+	"author": "Alex",
+	"license": "MIT",
+	"keywords": [
+		"spicetify",
+		"spotify",
+		"queue",
+		"extension",
+		"music"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yourusername/splitify"
+	},
+	"scripts": {
+		"build": "spicetify-creator",
+		"build-local": "spicetify-creator --out=dist --minify",
+		"watch": "spicetify-creator --watch"
+	},
+	"devDependencies": {
+		"@types/react": "^19.1.8",
+		"@types/react-dom": "^19.1.6",
+		"spicetify-creator": "^1.0.17"
+	}
+}

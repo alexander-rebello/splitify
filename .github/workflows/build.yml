@@ -65,8 +65,8 @@ jobs:
           mkdir -p splitify-dist
           cp -r dist/* splitify-dist/
           cp README.md splitify-dist/
-          cp icon.svg splitify-dist/
-          cp icon-active.svg splitify-dist/
+          cp src/icon.svg splitify-dist/
+          cp src/icon-active.svg splitify-dist/
 
       - name: Create zip archive
         run: |

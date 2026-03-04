@@ -62,13 +62,13 @@ jobs:
 
       - name: Create release folder structure
         run: |
-          mkdir -p splitify/splitify-dist
-          cp -r dist/* splitify/splitify-dist/
-          cp README.md splitify/splitify-dist/
+          mkdir -p splitify-dist
+          cp -r dist/* splitify-dist/
+          cp README.md splitify-dist/
 
       - name: Create zip archive
         run: |
-          zip -r splitify.zip splitify/
+          zip -r splitify.zip splitify-dist/
 
       - name: Create Release
         uses: softprops/action-gh-release@v1

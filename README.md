@@ -18,40 +18,50 @@ A beautiful queue display extension for Spotify that shows your upcoming tracks 
 
 Before installing Splitify, you need to have Spicetify installed on your system.
 
-1. **Install Spicetify**:
-   - Visit [Spicetify Official Documentation](https://spicetify.app/) and follow the installation guide for your OS
-   - Make sure Spotify is installed and properly detected by Spicetify
+- Visit [Spicetify Official Documentation](https://spicetify.app/) and follow the installation guide for your OS
+- Make sure Spotify is installed and properly detected by Spicetify
 
-2. **Clone or Download this Extension**:
+### Manual Install (Recommended)
+
+1. **Download the Latest Release**:
+   - Go to the [Releases](https://github.com/alexander-rebello/splitify/releases) page
+   - Download the latest `splitify.zip`
+
+2. **Extract and Move the Folder**:
+   - Extract the zip file
+   - Copy the `splitify/splitify-dist/` folder to your Spicetify CustomApps directory:
+     - **Windows**: `%APPDATA%\spicetify\CustomApps\`
+     - **macOS**: `~/.config/spicetify/CustomApps/` or `$SPICETIFY_CONFIG/CustomApps/`
+     - **Linux**: `~/.config/spicetify/CustomApps/` or `$XDG_CONFIG_HOME/.config/spicetify/CustomApps/`
+
+3. **Enable the Custom App**:
 
    ```bash
-   git clone https://github.com/alexander-rebello/splitify.git
-   cd splitify
-   ```
-
-3. **Install the Extension**:
-   - Copy the built extension to your Spicetify extensions folder:
-     - **Windows**: `%APPDATA%\spicetify\Extensions\`
-     - **macOS**: `~/.config/spicetify/Extensions/`
-     - **Linux**: `~/.config/spicetify/Extensions/`
-
-   Or use the pre-built version:
-
-   ```bash
-   npm run build-local
-   ```
-
-   Then copy the contents of the `dist/` folder to your Spicetify extensions directory.
-
-4. **Apply the Extension**:
-   ```bash
-   spicetify config extensions splitify.js
+   spicetify config custom_apps splitify
    spicetify apply
    ```
 
+   > **Note:** Using the `config` command appends to the existing custom apps list. If you prefer manual setup, see the alternative method below.
+
+### Alternative: Manual Config Edit
+
+You can also manually edit your `config-xpui.ini` file in your Spicetify config directory:
+
+```ini
+[AdditionalOptions]
+...
+custom_apps = splitify
+```
+
+Then run:
+
+```bash
+spicetify apply
+```
+
 ### Usage
 
-Once installed, the extension will add a new queue page that displays:
+Once installed and enabled, Splitify will display as a custom app in Spotify showing:
 
 - Currently playing track with artwork and details
 - Complete list of upcoming tracks in queue

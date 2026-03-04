@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CurrentTrackHeader } from "./components/CurrentTrackHeader";
 import { TrackList } from "./components/TrackList";
-import "./css/style.css";
+import "./style.css";
 import { NextTrack } from "./types";
 
 // Main App component

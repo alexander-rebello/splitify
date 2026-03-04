@@ -31,6 +31,11 @@ jobs:
       - name: Build extension
         run: npm run build-local
 
+      - name: Minify CSS
+        run: |
+          npm install -g clean-css-cli
+          cleancss src/style.css -o src/style.min.css
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -54,9 +59,20 @@ jobs:
           name: splitify-build
           path: dist/
 
+      - name: Create release folder structure
+        run: |
+          mkdir -p splitify/splitify-dist
+          cp -r dist/* splitify/splitify-dist/
+          cp README.md splitify/splitify-dist/
+          cp src/style.min.css splitify/splitify-dist/style.css
+
+      - name: Create zip archive
+        run: |
+          zip -r splitify.zip splitify/
+
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: dist/**
+          files: splitify.zip
           draft: false
           prerelease: false

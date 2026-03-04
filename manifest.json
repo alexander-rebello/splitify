@@ -9,5 +9,6 @@
 		}
 	],
 	"readme": "README.md",
-	"icon": "icon.svg"
+	"icon": "src/icon.svg",
+	"active-icon": "src/icon-active.svg"
 }

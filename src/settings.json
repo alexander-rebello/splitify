@@ -1,6 +1,6 @@
 {
-  "displayName": "splitify",
-  "nameId": "splitify",
-  "icon": "css/icon.svg",
-  "activeIcon": "css/icon.svg"
+	"displayName": "Splitify",
+	"nameId": "splitify",
+	"icon": "icon.svg",
+	"activeIcon": "icon-active.svg"
 }

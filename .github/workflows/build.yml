@@ -34,7 +34,7 @@ jobs:
       - name: Minify CSS
         run: |
           npm install -g clean-css-cli
-          cleancss src/style.css -o dist/style.min.css
+          cleancss src/style.css -o dist/style.css
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
@@ -65,6 +65,8 @@ jobs:
           mkdir -p splitify-dist
           cp -r dist/* splitify-dist/
           cp README.md splitify-dist/
+          cp icon.svg splitify-dist/
+          cp icon-active.svg splitify-dist/
 
       - name: Create zip archive
         run: |

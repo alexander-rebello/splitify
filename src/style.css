@@ -3,6 +3,22 @@
  * Hover effects and UI customizations
  */
 
+/* Grid layout for track list rows */
+.main-trackList-trackListRowGrid {
+	display: grid;
+	grid-template-columns: [index] 16px [first] 6fr [var1] 4fr [last] minmax(120px, 1fr);
+	gap: 16px;
+	padding: 0 16px;
+	position: relative;
+	border-radius: 4px;
+	height: 56px;
+	align-items: center;
+}
+
+.main-trackList-trackListHeaderRow {
+	height: 36px;
+}
+
 .main-trackList-trackListRow:hover .main-trackList-number {
 	opacity: 0;
 }
